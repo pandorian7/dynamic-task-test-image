@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY generate.py .
 COPY wallapper.jpg .
 
-ARG FLAG="CTF{sample_flag}"
+ARG FLAG
 ENV FLAG=${FLAG}
 
 RUN python generate.py --flag "${FLAG}" --input wallapper.jpg --output /image.png
